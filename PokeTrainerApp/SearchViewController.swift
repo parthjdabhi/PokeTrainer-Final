@@ -264,14 +264,13 @@ func searchPeopleMatched() {
     
     @IBAction func actionInviteFriend(sender:UIButton) {
         
-        let textToShare = "i found application used to pair Poke Trainers with those in their area looking to chat, adventure, & make new friends. Link: http://goo.gl/VklXaV "
+        let textToShare = "i found application used to pair Poke Trainers with those in our area looking to chat, adventure, & make new friends. Download here http://goo.gl/VklXaV "
         
         let objectsToShare = [textToShare]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         
         //New Excluded Activities Code
         activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
-        //
         
         activityVC.popoverPresentationController?.sourceView = self.view
         self.presentViewController(activityVC, animated: true, completion: nil)
